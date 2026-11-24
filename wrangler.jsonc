@@ -1,0 +1,25 @@
+// Configuració de Cloudflare per a Reserves PratFP (projecte de demostració)
+// Documentació: https://developers.cloudflare.com/workers/wrangler/configuration/
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "reserves-pratfp",
+	// Codi de l'API (backend)
+	"main": "worker/index.ts",
+	"compatibility_date": "2026-10-01",
+	// Fitxers de React: les rutes que no són /api/ tornen index.html
+	"assets": {
+		"not_found_handling": "single-page-application"
+	},
+	"observability": {
+		"enabled": true
+	},
+	// Base de dades D1: al codi s'hi accedeix amb env.DB
+	// Demo NOMÉS en local: aquest identificador no correspon a cap base de dades de Cloudflare
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "reserves-pratfp-db",
+			"database_id": "00000000-0000-4000-8000-000000000000"
+		}
+	]
+}

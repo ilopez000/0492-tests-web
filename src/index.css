@@ -1,0 +1,27 @@
+:root {
+  --vermell: #e1211d;
+  --gris: #4c6971;
+  --fons: #f4f6f7;
+  font-family: system-ui, sans-serif;
+  color: #1d2a2e;
+  background: var(--fons);
+}
+body { margin: 0; }
+.capcalera { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: white; border-bottom: 3px solid var(--vermell); }
+.marca { font-weight: 700; font-size: 1.2rem; color: #1d2a2e; text-decoration: none; }
+.marca span { color: var(--vermell); }
+nav { display: flex; gap: 16px; }
+nav a { color: var(--gris); text-decoration: none; padding: 4px 2px; }
+nav a.actiu { color: var(--vermell); font-weight: 700; border-bottom: 2px solid var(--vermell); }
+main { max-width: 640px; margin: 40px auto; padding: 0 16px; }
+h1 { color: var(--vermell); margin-bottom: 0; }
+h2 { color: var(--gris); font-size: 1.1rem; margin-top: 28px; }
+.subtitol { color: var(--gris); margin-top: 4px; }
+.pendent { background: white; border: 2px dashed #c9d3d6; border-radius: 8px; padding: 24px; color: var(--gris); text-align: center; }
+.llista { list-style: none; padding: 0; }
+.llista li { display: flex; justify-content: space-between; gap: 12px; background: white; border: 1px solid #e1e7e9; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+.llista li span { color: var(--gris); }
+footer { margin: 32px 0; color: var(--gris); font-size: 0.85rem; text-align: center; }
+.error { color: var(--vermell); }
+.reserva .quan, .reserva .que { display: flex; flex-direction: column; gap: 2px; }
+.reserva .que { text-align: right; }
